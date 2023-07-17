@@ -7,7 +7,7 @@ public enum NetworkError: Error{
 
 public class WebServiceManager {
     static var sharedInstance = WebServiceManager()
-    init(){}
+    public init(){}
     
     
     public func getRequest<T: Codable>(url: URL, parse: @escaping (Data) -> T?, completion: @escaping (Result<T?, NetworkError>) -> Void) {
